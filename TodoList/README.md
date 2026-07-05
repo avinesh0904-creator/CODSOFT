@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📝 To-Do List Application
 
 ## 📌 Project Description
@@ -56,3 +57,29 @@ TodoList/
 
 ## 📄 License
 This project is created for learning purposes as part of the CODSOFT Python Programming Internship.
+=======
+To-Do List Application
+
+Description
+This is a simple command-line To-Do List application developed using Python. It allows users to manage their daily tasks efficiently.
+
+Features
+Add a new task
+View all tasks
+Update existing tasks
+Delete tasks
+Exit the application
+
+Technologies Used
+Python 3
+Visual Studio Code
+
+How to Run
+Clone this repository.
+Open the project in VS Code.
+Run:
+python todo.py
+
+Author
+Avinesh
+>>>>>>> aaec90d6860a411c78ba43e5767355e713913a0d

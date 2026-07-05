@@ -1,3 +1,6 @@
+# CODSOFT Internship - Task 1
+# To-Do List Application
+
 tasks = []
 
 def show_tasks():
@@ -28,32 +31,34 @@ while True:
 
     elif choice == "3":
         show_tasks()
-        try:
-            num = int(input("Enter task number to update: "))
-            if 1 <= num <= len(tasks):
-                new_task = input("Enter new task: ")
-                tasks[num - 1] = new_task
-                print("Task updated successfully!")
-            else:
-                print("Invalid task number!")
-        except ValueError:
-            print("Please enter a valid number!")
+        if len(tasks) > 0:
+            try:
+                task_no = int(input("Enter task number to update: "))
+                if 1 <= task_no <= len(tasks):
+                    new_task = input("Enter new task: ")
+                    tasks[task_no - 1] = new_task
+                    print("Task updated successfully!")
+                else:
+                    print("Invalid task number.")
+            except ValueError:
+                print("Please enter a valid number.")
 
     elif choice == "4":
         show_tasks()
-        try:
-            num = int(input("Enter task number to delete: "))
-            if 1 <= num <= len(tasks):
-                removed = tasks.pop(num - 1)
-                print(f"'{removed}' deleted successfully!")
-            else:
-                print("Invalid task number!")
-        except ValueError:
-            print("Please enter a valid number!")
+        if len(tasks) > 0:
+            try:
+                task_no = int(input("Enter task number to delete: "))
+                if 1 <= task_no <= len(tasks):
+                    deleted = tasks.pop(task_no - 1)
+                    print(f"Task '{deleted}' deleted successfully!")
+                else:
+                    print("Invalid task number.")
+            except ValueError:
+                print("Please enter a valid number.")
 
     elif choice == "5":
-        print("Thank you for using To-Do List!")
+        print("Thank you for using the To-Do List!")
         break
 
     else:
-        print("Invalid choice! Try again.")
+        print("Invalid choice! Please try again.")
